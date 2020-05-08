@@ -32,4 +32,14 @@ public class Test01 {
         System.out.println(orig1);
         System.out.println(dest1);
     }
+
+    @Test
+    public void testClass() {
+        OrigBean orig = getOrigBean();
+
+        DestBean dest = BeanCopier.copy(orig, DestBean.class,"name");
+
+        System.out.println(orig);
+        System.out.println(dest);
+    }
 }
